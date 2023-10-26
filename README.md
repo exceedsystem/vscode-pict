@@ -8,7 +8,7 @@ Currently, it works only on Microsoft Windows, but we hope to support Mac and Li
 
 ## How to use?
 
-1. Open a new text editor and create a test case for PICT as follows.
+1. Open a new text editor and create a PICT model file as follows.
 
    ```
    #
@@ -55,7 +55,7 @@ Currently, it works only on Microsoft Windows, but we hope to support Mac and Li
      /s       - Show model statistics
    ```
 
-3. Save the created test case with a name of your choice, such as 'test_pattern_001.txt'.
+3. Save the created model file with a name of your choice, such as 'testcase_001.txt'.
 4. Please Open command palette and run `Run PICT` command.
 
    ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/24ca53ba-5e8e-45fb-b60d-c3dc443350f2)
