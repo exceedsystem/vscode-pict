@@ -3,6 +3,7 @@
 This extension generates pairwise test patterns using Microsoft PICT.
 
 **Limitations:**
+
 Currently, it works only on Microsoft Windows, but we hope to support Mac and Linux in the future.
 
 ## How to use?
@@ -57,16 +58,18 @@ Currently, it works only on Microsoft Windows, but we hope to support Mac and Li
 3. Save the created test case with a name of your choice, such as 'test_pattern_001.txt'.
 4. Please Open command palette and run `Run PICT` command.
 
-   ![image](dummy)
+   ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/7261b530-8618-4f37-9924-1549a7db8cd2)
 
 5. After PICT is run, the generated test cases will be displayed in a new editor tab.
 
-   ![image](dummy)
+   ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/6fb4356b-1cba-4a37-bbda-8a27f3019fd3)
 
 ## References
 
 **microsoft/pict**
+
 https://github.com/microsoft/pict
 
 **Learn how to write test case for PICT.**
+
 https://github.com/Microsoft/pict/blob/main/doc/pict.md
