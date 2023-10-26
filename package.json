@@ -1,21 +1,37 @@
 {
+  "publisher": "EXCEEDSYSTEM",
   "name": "vscode-pict",
   "displayName": "VSCode PICT",
   "description": "Using pict with vscode",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.83.0"
   },
   "categories": [
-    "Other"
+    "Testing"
   ],
+  "pricing": "Free",
+  "icon": "images/icon.png",
+  "keywords": [
+    "pict",
+    "pairwise",
+    "unit testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exceedsystem/vscode-pict"
+  },
+  "bugs": {
+    "url": "https://github.com/exceedsystem/vscode-pict/issues"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "pict.run",
-        "title": "Run Pict"
+        "title": "Run PICT"
       }
     ]
   },

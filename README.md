@@ -1,71 +1,72 @@
-# pict README
+# VSCode PICT
 
-This is the README for your extension "pict". After writing up a brief description, we recommend including the following sections.
+This extension generates pairwise test patterns using Microsoft PICT.
 
-## Features
+**Limitations:**
+Currently, it works only on Microsoft Windows, but we hope to support Mac and Linux in the future.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## How to use?
 
-For example if there is an image subfolder under your extension project workspace:
+1. Open a new text editor and create a test case for PICT as follows.
 
-\!\[feature X\]\(images/feature-x.png\)
+   ```
+   #
+   # This is a sample model for testing volume creation
+   #
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+   Type:          Primary, Logical, Single, Span, Stripe, Mirror, RAID-5
+   Size:          10, 100, 500, 1000, 5000, 10000, 40000
+   Format method: quick, slow
+   File system:   FAT, FAT32, NTFS
+   Cluster size:  512, 1024, 2048, 4096, 8192, 16384, 32768, 65536
+   Compression:   on, off
+   ```
 
-## Requirements
+2. If you would like to specify a parameter arguments for PICT, specify it as is in the header comment section `# Options: `.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+   ```
+   #
+   # This is a sample model for testing volume creation
+   #
+   # Options: /o:2 /d:, /a:| /n:~ /r:1 /c /s
 
-## Extension Settings
+   Type:          Primary, Logical, Single, Span, Stripe, Mirror, RAID-5
+   Size:          10, 100, 500, 1000, 5000, 10000, 40000
+   Format method: quick, slow
+   File system:   FAT, FAT32, NTFS
+   Cluster size:  512, 1024, 2048, 4096, 8192, 16384, 32768, 65536
+   Compression:   on, off
+   ```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+   The following parameters can be used.
 
-For example:
+   ```
+   Usage: pict model [options]
 
-This extension contributes the following settings:
+   Options:
+     /o:N|max - Order of combinations (default: 2)
+     /d:C     - Separator for values  (default: ,)
+     /a:C     - Separator for aliases (default: |)
+     /n:C     - Negative value prefix (default: ~)
+     /e:file  - File with seeding rows
+     /r[:N]   - Randomize generation, N - seed
+     /c       - Case-sensitive model evaluation
+     /s       - Show model statistics
+   ```
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+3. Save the created test case with a name of your choice, such as 'test_pattern_001.txt'.
+4. Please Open command palette and run `Run PICT` command.
 
-## Known Issues
+   ![image](dummy)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+5. After PICT is run, the generated test cases will be displayed in a new editor tab.
 
-## Release Notes
+   ![image](dummy)
 
-Users appreciate release notes as you update your extension.
+## References
 
-### 1.0.0
+**microsoft/pict**
+https://github.com/microsoft/pict
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Learn how to write test case for PICT.**
+https://github.com/Microsoft/pict/blob/main/doc/pict.md
