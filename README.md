@@ -64,12 +64,24 @@ Currently, it works only on Microsoft Windows, but we hope to support Mac and Li
 
    ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/a78a3987-6fec-46ad-a4b5-c6b2e0434b45)
 
+## Additional information
+
+**Included PICT executable file**
+
+https://github.com/microsoft/pict/releases/download/v3.7.4/pict.exe
+
+**SHA1**
+2f3145acec23240c10e9f476c8ca77846d9c458f
+
+**VirusTotal scan result**
+https://www.virustotal.com/gui/file/80aba862739cf18b4faa13d408163324d188a1c4efccdd977d9c5ba3f8950bbd
+
 ## References
 
 **microsoft/pict**
 
 https://github.com/microsoft/pict
 
-**Learn how to write test case for PICT.**
+**Learn how to write test case for PICT**
 
 https://github.com/Microsoft/pict/blob/main/doc/pict.md

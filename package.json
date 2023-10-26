@@ -3,7 +3,7 @@
   "name": "vscode-pict",
   "displayName": "VSCode PICT",
   "description": "Using pict with vscode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "engines": {
     "vscode": "^1.83.0"
