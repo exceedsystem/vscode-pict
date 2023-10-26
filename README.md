@@ -58,11 +58,11 @@ Currently, it works only on Microsoft Windows, but we hope to support Mac and Li
 3. Save the created test case with a name of your choice, such as 'test_pattern_001.txt'.
 4. Please Open command palette and run `Run PICT` command.
 
-   ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/7261b530-8618-4f37-9924-1549a7db8cd2)
+   ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/24ca53ba-5e8e-45fb-b60d-c3dc443350f2)
 
 5. After PICT is run, the generated test cases will be displayed in a new editor tab.
 
-   ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/6fb4356b-1cba-4a37-bbda-8a27f3019fd3)
+   ![image](https://github.com/exceedsystem/vscode-pict/assets/70489172/a78a3987-6fec-46ad-a4b5-c6b2e0434b45)
 
 ## References
 
