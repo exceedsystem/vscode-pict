@@ -66,7 +66,7 @@ Currently, it works only on Microsoft Windows(x64), but we hope to support Mac a
 
 ## Additional information
 
-**Included PICT executable file**
+**Bundled PICT executable file**
 
 https://github.com/microsoft/pict/releases/download/v3.7.4/pict.exe
 

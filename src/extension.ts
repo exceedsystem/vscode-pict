@@ -22,8 +22,6 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     const inputFilePath = document?.fileName;
-    const workingDirPath = path.dirname(inputFilePath);
-    process.chdir(workingDirPath);
 
     const eol = document.eol === vscode.EndOfLine.LF ? '\r' : '\r\n';
 
@@ -41,9 +39,10 @@ export function activate(context: vscode.ExtensionContext) {
       .filter((s) => s);
 
     const pictExecutablePath = context.asAbsolutePath(path.join('resources', 'pict.exe'));
+    const workingDirPath = path.dirname(inputFilePath);
     let pictRet: SpawnRet = { stdout: '', error: '' };
     try {
-      pictRet = await asyncSpawn(pictExecutablePath, [inputFilePath, ...pictParams]);
+      pictRet = await asyncSpawn(pictExecutablePath, workingDirPath, [inputFilePath, ...pictParams]);
     } catch (e) {
       await vscode.window.showErrorMessage(`An error ocurred during running pict.(${(e as SpawnRet).error})`);
       return;
@@ -61,9 +60,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 export function deactivate() {}
 
-async function asyncSpawn(command: string, args: string[]): Promise<SpawnRet> {
+async function asyncSpawn(command: string, cwd: string, args: string[]): Promise<SpawnRet> {
   return new Promise((resolve, reject) => {
-    const cp = spawn(command, args);
+    const cp = spawn(command, args, { cwd: cwd });
     let stdout = '';
     let error = '';
     cp.stdout.on('data', (d) => {
