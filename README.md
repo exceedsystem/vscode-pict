@@ -4,7 +4,7 @@ This extension generates pairwise test patterns using Microsoft PICT.
 
 **Limitations:**
 
-Currently, it works only on Microsoft Windows, but we hope to support Mac and Linux in the future.
+Currently, it works only on Microsoft Windows(x64), but we hope to support Mac and Linux in the future.
 
 ## How to use?
 
@@ -23,13 +23,13 @@ Currently, it works only on Microsoft Windows, but we hope to support Mac and Li
    Compression:   on, off
    ```
 
-2. If you would like to specify a parameter arguments for PICT, specify it as is in the header comment section `# Options: `.
+2. If you would like to specify a parameter arguments for PICT, specify it as is in the header comment section `# Options`.
 
    ```
    #
    # This is a sample model for testing volume creation
    #
-   # Options: /o:2 /d:, /a:| /n:~ /r:1 /c /s
+   # Options /o:2 /d:, /a:| /n:~ /r:1 /c
 
    Type:          Primary, Logical, Single, Span, Stripe, Mirror, RAID-5
    Size:          10, 100, 500, 1000, 5000, 10000, 40000
