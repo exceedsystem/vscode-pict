@@ -38,7 +38,18 @@ export function activate(context: vscode.ExtensionContext) {
       .map((s) => s.trim())
       .filter((s) => s);
 
-    const pictExecutablePath = context.asAbsolutePath(path.join('resources', 'pict.exe'));
+    let pictExecutablePath: string;
+    switch (process.platform) {
+      case 'win32':
+        pictExecutablePath = context.asAbsolutePath(path.join('resources/win64', 'pict.exe'));
+        break;
+      case 'darwin':
+        pictExecutablePath = context.asAbsolutePath(path.join('resources/macos_m1', 'pict'));
+        break;
+      default:
+        throw new Error(`Unsupported platform(${process.platform}).`);
+    }
+
     const workingDirPath = path.dirname(inputFilePath);
     let pictRet: SpawnRet = { stdout: '', error: '' };
     try {
@@ -58,7 +69,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable);
 }
 
-export function deactivate() {}
+export function deactivate() { }
 
 async function asyncSpawn(command: string, cwd: string, args: string[]): Promise<SpawnRet> {
   return new Promise((resolve, reject) => {
