@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.6
+
+- Updated dev dependencies to address security advisories (glob, cross-spawn) and refresh the test tooling.
+
 ## 0.0.5
 
 - Improved the method for changing working directory
